@@ -1,0 +1,15 @@
+{
+  "title": "Social Network",
+  "profile_name": "Some guy",
+  "subtitle": "Something like a social network",
+  "greet_message": "Enjoying life",
+  "days_on_site": "You've been on the site for # days",
+  "friends": "Friends",
+  "photos": "Photos",
+  "add": "Add",
+  "like": " Like",
+  "under_development": "Under Development",
+  "binary_search_algorithm": "I don't know what to write so I'll insert a binary search algorithm:\n"
+
+}
+

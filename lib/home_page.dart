@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -42,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 250,
               ),
               const Text(
-                'Какой-то Челик',
+                '#Name', // Placeholder for a dynamically fetched name
                 style: TextStyle(
                   fontSize: 10,
                 ),
@@ -55,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
               const Row(
                 children: <Widget>[
                   Text(
-                    "Радуеца жизни",
+                    '#GreetMessage', // Placeholder for a dynamically fetched greeting message
                     style: TextStyle(
                       fontSize: 25,
                     ),
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     icon: const Icon(
                       Icons.date_range,
                     ),
-                    label: Text("Вы находитесь на сайте уже : $_date дней"),
+                    label: Text("#DaysOnSite $_date"), // Placeholder for dynamically fetched days on site
                   ),
                   SizedBox(height: 150),
                 ],
@@ -79,21 +80,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   Column(
                     children: [
                       Icon(Icons.account_box_outlined),
-                      Text("Friends"),
+                      Text('#Friends'), // Placeholder for dynamically fetched friends
                       SizedBox(width: 100),
                     ],
                   ),
                   Column(
                     children: [
                       Icon(Icons.photo),
-                      Text("Photos"),
+                      Text('#Photos'), // Placeholder for dynamically fetched photos
                       SizedBox(width: 100),
                     ],
                   ),
                   Column(
                     children: [
                       Icon(Icons.add_circle),
-                      Text("Add"),
+                      Text('#Add'), // Placeholder for dynamically fetched add action
                       SizedBox(width: 100),
                     ],
                   ),
@@ -107,20 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   children: [
                     const Text(
-                      "   Не знаю что написать поэтому вставлю алгоритм бинарного поиска:\n"
-                          """
-def bim_s(arr, target):
-  left, right = 0, len(arr) - 1
-  while left <= right:
-    mid = (left + right) // 2
-    if arr[mid] == target:
-      return mid
-    elif arr[mid] < target:
-      left = mid + 1
-    else:
-      right = mid - 1
-  return left
-""",
+                      "#BinarySearchAlgorithm", // Placeholder for dynamically fetched binary search algorithm
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -133,7 +121,7 @@ def bim_s(arr, target):
                           Icons.hotel_class_rounded,
                           size: 24.0,
                         ),
-                        label: Text("$_counter Like"),
+                        label: Text("$_counter #Like"), // Placeholder for dynamically fetched like count
                       ),
                     ),
                   ],
@@ -141,20 +129,19 @@ def bim_s(arr, target):
               ),
             ],
           ),
-          const SizedBox(width: 50),
+          SizedBox(width: 50),
           Column(
             children: <Widget>[
               Container(
                 color: Colors.blue,
                 height: 400,
                 width: 325,
-                padding:
-                const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 margin: const EdgeInsets.all(20),
                 transform: Matrix4.rotationZ(0.05),
-                child: const Center(
+                child: Center(
                   child: Text(
-                    "В разработке",
+                    tr('under_development'),
                     style: TextStyle(
                       color: Colors.white,
                     ),
