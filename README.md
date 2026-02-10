@@ -9,8 +9,7 @@ Today, I teach children the basic principles of programming in languages:
 - Java
 - Python
 - Kotlin
-- Pascal
-  
+- Go
 I think that high school students should be able to work at a basic level with Git.
 
 I tried to teach Lazarus and Delphi to children, 
